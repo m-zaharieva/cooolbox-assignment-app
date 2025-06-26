@@ -1,0 +1,82 @@
+[
+    {
+        "name": "TechNova",
+        "country": "USA",
+        "industry": "Technology",
+        "founded_year": 2005,
+        "details": {
+            "company_type": "Public",
+            "size": "Large",
+            "ceo_name": "Alice Johnson",
+            "headquarters": "San Francisco, CA"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 500000000, "net_income": 120000000 },
+            { "year": 2023, "revenue": 550000000, "net_income": 130000000 }
+        ]
+    },
+    {
+        "name": "GreenBank",
+        "country": "UK",
+        "industry": "Finance",
+        "founded_year": 1998,
+        "details": {
+            "company_type": "Private",
+            "size": "Medium",
+            "ceo_name": "Robert Smith",
+            "headquarters": "London"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 20000000, "net_income": 4000000 },
+            { "year": 2023, "revenue": 22000000, "net_income": 4500000 }
+        ]
+    },
+    {
+        "name": "MediCare Solutions",
+        "country": "Germany",
+        "industry": "Healthcare",
+        "founded_year": 2010,
+        "details": {
+            "company_type": "Public",
+            "size": "Medium",
+            "ceo_name": "Clara Schmidt",
+            "headquarters": "Berlin"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 8000000, "net_income": 1200000 },
+            { "year": 2023, "revenue": 9000000, "net_income": 1500000 }
+        ]
+    },
+    {
+        "name": "AgroFuture",
+        "country": "Brazil",
+        "industry": "Agriculture",
+        "founded_year": 2015,
+        "details": {
+            "company_type": "Private",
+            "size": "Small",
+            "ceo_name": "Lucas Silva",
+            "headquarters": "São Paulo"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 3000000, "net_income": 500000 },
+            { "year": 2023, "revenue": 3500000, "net_income": 600000 }
+        ]
+    },
+    {
+        "name": "UrbanConstruct",
+        "country": "Canada",
+        "industry": "Construction",
+        "founded_year": 2000,
+        "details": {
+            "company_type": "Public",
+            "size": "Large",
+            "ceo_name": "Emily Clark",
+            "headquarters": "Toronto"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 100000000, "net_income": 15000000 },
+            { "year": 2023, "revenue": 110000000, "net_income": 17000000 }
+        ]
+    }
+]
