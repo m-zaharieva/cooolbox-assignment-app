@@ -1,0 +1,9 @@
+nav {
+    width: 100%;
+    border-bottom: 1px solid rgb(74, 74, 74);
+    margin-bottom: 16px;
+}
+nav h1 {
+    font-size: 26px;
+    text-align: center;
+}
