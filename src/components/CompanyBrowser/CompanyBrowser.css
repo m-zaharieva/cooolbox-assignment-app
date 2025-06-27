@@ -1,0 +1,19 @@
+.companyBrowser {
+    max-width: 900px;
+    margin: auto;
+    padding: 16px;
+}
+
+.companyBrowser__list {
+    list-style: none;
+    padding: 0px;
+    display: grid;
+    grid: minmax(100px, min-content);
+    gap: 10px;
+}
+
+@media (min-width: 576px) {
+    .companyBrowser__list {
+        grid: minmax(100px, min-content) / repeat(2, 1fr);
+    }
+}
