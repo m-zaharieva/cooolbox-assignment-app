@@ -14,21 +14,20 @@ export function advancedSearch(companies: Company[], query: string): Company[] {
                     return company.industry.toLowerCase() === value.toLowerCase();
                 if (key === 'ceo_name')
                     return company.details.ceo_name.toLowerCase().includes(value.toLowerCase());
-                // Add more fields as needed
             }
             // Handle numeric comparison
             const numComp = part.match(/(\w+)\s*([><=]+)\s*(\d+)/);
             if (numComp) {
-                const [, field, op, val] = numComp;
+                const [, field, operation, val] = numComp;
                 let fieldValue: number | undefined;
                 if (field === 'revenue') fieldValue = getLatestRevenue(company);
                 if (field === 'founded_year') fieldValue = company.founded_year;
                 if (typeof fieldValue !== 'number') return false;
-                if (op === '>') return fieldValue > +val;
-                if (op === '>=') return fieldValue >= +val;
-                if (op === '<') return fieldValue < +val;
-                if (op === '<=') return fieldValue <= +val;
-                if (op === '=') return fieldValue === +val;
+                if (operation === '>') return fieldValue > +val;
+                if (operation === '>=') return fieldValue >= +val;
+                if (operation === '<') return fieldValue < +val;
+                if (operation === '<=') return fieldValue <= +val;
+                if (operation === '=') return fieldValue === +val;
             }
             // Fallback: partial match
             return JSON.stringify(company).toLowerCase().includes(part.toLowerCase());
