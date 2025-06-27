@@ -1,69 +1,112 @@
-# React + TypeScript + Vite
+# Company Browser App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript + Vite application for searching, filtering, and sorting an in-memory dataset of companies and their structured information.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Setup Instructions
 
-## Expanding the ESLint configuration
+1. **Clone the repository:**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+    ```bash
+    git clone cooolbox-assignment-app
+    cd cb-app
+    ```
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2. **Install dependencies:**
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+    ```bash
+    npm install
+    ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+3. **Start the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+4. **Open the app:**
+    - Visit [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## 🧩 Features
+
+-   **Search:**
+
+    -   Reacts after 3+ characters.
+    -   Searches across all fields (including nested fields like CEO name, revenue, etc.).
+    -   Supports partial matches, exact matches, and numeric comparisons (e.g., `founded_year > 2000`).
+    -   Debounced input for performance.
+
+-   **Sorting:**
+
+    -   Sort by name, revenue, founded year, or company type.
+    -   Custom comparator functions for different data types.
+
+-   **Filtering:**
+
+    -   Filter by industry and company type using dropdowns.
+    -   Multiple filters can be applied at once.
+
+-   **Responsive UI:**
+
+    -   Clean, responsive layout.
+    -   “No results found” message when no companies match.
+
+-   **Bonus Extensions:**
+    -   **Advanced search:** Supports logical operators in queries (e.g., `industry:Finance AND revenue>1000000`).
+    -   **Debounced search input:** Reduces unnecessary filtering while typing.
+    -   **Extended data model:** Includes board members, offices, and stock info for each company.
+    -   **Testable logic:** Core search, filter, and sort logic is separated into utility functions for easy maintaining.
+
+---
+
+## 📝 Notes on Complex Logic & Extensions
+
+-   **Custom Search Algorithm:**  
+    The search logic parses the query to support partial matches, exact matches, and numeric comparisons. It also supports logical operators like `AND` for advanced queries.
+
+-   **Debounced Search:**  
+    The search input uses a debounce hook to delay filtering until the user stops typing, improving performance and UX.
+
+-   **Extensible Data Model:**  
+    The company data includes related models such as `board_members`, `offices`, and `stock_info`, making the app easily extensible for future requirements.
+
+-   **Testability:**  
+    Core logic for searching, sorting, and filtering is extracted into utility files, making it easy to write and run unit tests.
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+  components/
+    CompanyBrowser/
+      CompanyItem/...
+      SearchBar/...
+    Header/...
+    Icons/...
+  data/
+    data.json
+  hooks/
+    useDebouncedValue.ts
+  types/
+    dataTypes.ts
+  utils/
+    searchUtils.ts
+    sortUtils.ts
+    utils.ts
+  App.tsx
+  main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📢 Feedback & Improvements
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+-   The app is designed for easy extensibility and testability.
+-   For further improvements, consider adding more filters, advanced query parsing, or integrating a state management library for larger datasets.
+
+---
