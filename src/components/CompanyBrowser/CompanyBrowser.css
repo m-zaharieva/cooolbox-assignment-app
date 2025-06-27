@@ -17,3 +17,16 @@
         grid: minmax(100px, min-content) / repeat(2, 1fr);
     }
 }
+
+.companyBrowser__noResult {
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 18px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.companyBrowser__noResult img {
+    width: 140px;
+    height: auto;
+}
