@@ -13,7 +13,19 @@
         "financials": [
             { "year": 2022, "revenue": 500000000, "net_income": 120000000 },
             { "year": 2023, "revenue": 550000000, "net_income": 130000000 }
-        ]
+        ],
+        "board_members": [
+            { "name": "John Doe", "position": "Chairman" },
+            { "name": "Jane Smith", "position": "CFO" }
+        ],
+        "offices": [
+            { "city": "San Francisco", "country": "USA" },
+            { "city": "New York", "country": "USA" }
+        ],
+        "stock_info": {
+            "symbol": "TNV",
+            "price": 320.5
+        }
     },
     {
         "name": "GreenBank",
@@ -29,7 +41,9 @@
         "financials": [
             { "year": 2022, "revenue": 20000000, "net_income": 4000000 },
             { "year": 2023, "revenue": 22000000, "net_income": 4500000 }
-        ]
+        ],
+        "board_members": [{ "name": "Emily Turner", "position": "Chairwoman" }],
+        "offices": [{ "city": "London", "country": "UK" }]
     },
     {
         "name": "MediCare Solutions",
@@ -45,7 +59,13 @@
         "financials": [
             { "year": 2022, "revenue": 8000000, "net_income": 1200000 },
             { "year": 2023, "revenue": 9000000, "net_income": 1500000 }
-        ]
+        ],
+        "board_members": [{ "name": "Hans Müller", "position": "Chairman" }],
+        "offices": [{ "city": "Berlin", "country": "Germany" }],
+        "stock_info": {
+            "symbol": "MCS",
+            "price": 78.9
+        }
     },
     {
         "name": "AgroFuture",
@@ -61,7 +81,8 @@
         "financials": [
             { "year": 2022, "revenue": 3000000, "net_income": 500000 },
             { "year": 2023, "revenue": 3500000, "net_income": 600000 }
-        ]
+        ],
+        "offices": [{ "city": "São Paulo", "country": "Brazil" }]
     },
     {
         "name": "UrbanConstruct",
@@ -77,6 +98,346 @@
         "financials": [
             { "year": 2022, "revenue": 100000000, "net_income": 15000000 },
             { "year": 2023, "revenue": 110000000, "net_income": 17000000 }
+        ],
+        "board_members": [{ "name": "Michael Brown", "position": "Chairman" }],
+        "offices": [
+            { "city": "Toronto", "country": "Canada" },
+            { "city": "Vancouver", "country": "Canada" }
+        ],
+        "stock_info": {
+            "symbol": "URC",
+            "price": 45.2
+        }
+    },
+    {
+        "name": "EduSmart",
+        "country": "USA",
+        "industry": "Education",
+        "founded_year": 2012,
+        "details": {
+            "company_type": "Private",
+            "size": "Medium",
+            "ceo_name": "Sarah Lee",
+            "headquarters": "Boston"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 12000000, "net_income": 2500000 },
+            { "year": 2023, "revenue": 14000000, "net_income": 3000000 }
+        ],
+        "board_members": [{ "name": "Tom Harris", "position": "Chairman" }],
+        "offices": [{ "city": "Boston", "country": "USA" }]
+    },
+    {
+        "name": "AutoDrive",
+        "country": "Germany",
+        "industry": "Automotive",
+        "founded_year": 1995,
+        "details": {
+            "company_type": "Public",
+            "size": "Large",
+            "ceo_name": "Klaus Weber",
+            "headquarters": "Munich"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 800000000, "net_income": 90000000 },
+            { "year": 2023, "revenue": 850000000, "net_income": 95000000 }
+        ],
+        "board_members": [{ "name": "Petra Klein", "position": "Chairwoman" }],
+        "offices": [
+            { "city": "Munich", "country": "Germany" },
+            { "city": "Stuttgart", "country": "Germany" }
+        ],
+        "stock_info": {
+            "symbol": "ADR",
+            "price": 210.7
+        }
+    },
+    {
+        "name": "Foodies",
+        "country": "France",
+        "industry": "Food & Beverage",
+        "founded_year": 2008,
+        "details": {
+            "company_type": "Private",
+            "size": "Small",
+            "ceo_name": "Marie Dubois",
+            "headquarters": "Paris"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 4000000, "net_income": 600000 },
+            { "year": 2023, "revenue": 4500000, "net_income": 700000 }
+        ],
+        "board_members": [{ "name": "Jean Martin", "position": "Chairman" }],
+        "offices": [{ "city": "Paris", "country": "France" }]
+    },
+    {
+        "name": "EcoEnergy",
+        "country": "Denmark",
+        "industry": "Energy",
+        "founded_year": 2018,
+        "details": {
+            "company_type": "Public",
+            "size": "Small",
+            "ceo_name": "Lars Jensen",
+            "headquarters": "Copenhagen"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 6000000, "net_income": 1200000 },
+            { "year": 2023, "revenue": 7000000, "net_income": 1500000 }
+        ],
+        "board_members": [{ "name": "Anna Nielsen", "position": "Chairwoman" }],
+        "offices": [{ "city": "Copenhagen", "country": "Denmark" }],
+        "stock_info": {
+            "symbol": "ECO",
+            "price": 32.1
+        }
+    },
+    {
+        "name": "FinTechX",
+        "country": "Singapore",
+        "industry": "Finance",
+        "founded_year": 2016,
+        "details": {
+            "company_type": "Private",
+            "size": "Medium",
+            "ceo_name": "Wei Tan",
+            "headquarters": "Singapore"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 25000000, "net_income": 5000000 },
+            { "year": 2023, "revenue": 30000000, "net_income": 6000000 }
+        ],
+        "board_members": [{ "name": "Siti Rahman", "position": "Chairwoman" }],
+        "offices": [{ "city": "Singapore", "country": "Singapore" }]
+    },
+    {
+        "name": "MediLife",
+        "country": "India",
+        "industry": "Healthcare",
+        "founded_year": 2003,
+        "details": {
+            "company_type": "Public",
+            "size": "Large",
+            "ceo_name": "Rajesh Kumar",
+            "headquarters": "Mumbai"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 90000000, "net_income": 12000000 },
+            { "year": 2023, "revenue": 95000000, "net_income": 13000000 }
+        ],
+        "board_members": [{ "name": "Priya Singh", "position": "Chairwoman" }],
+        "offices": [
+            { "city": "Mumbai", "country": "India" },
+            { "city": "Delhi", "country": "India" }
+        ],
+        "stock_info": {
+            "symbol": "MLF",
+            "price": 67.8
+        }
+    },
+    {
+        "name": "BuildRight",
+        "country": "Australia",
+        "industry": "Construction",
+        "founded_year": 2011,
+        "details": {
+            "company_type": "Private",
+            "size": "Medium",
+            "ceo_name": "Olivia Brown",
+            "headquarters": "Sydney"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 30000000, "net_income": 4000000 },
+            { "year": 2023, "revenue": 35000000, "net_income": 5000000 }
+        ],
+        "board_members": [{ "name": "Liam Wilson", "position": "Chairman" }],
+        "offices": [
+            { "city": "Sydney", "country": "Australia" },
+            { "city": "Melbourne", "country": "Australia" }
         ]
+    },
+    {
+        "name": "TravelEase",
+        "country": "Spain",
+        "industry": "Travel",
+        "founded_year": 2017,
+        "details": {
+            "company_type": "Private",
+            "size": "Small",
+            "ceo_name": "Carlos Ruiz",
+            "headquarters": "Madrid"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 2000000, "net_income": 300000 },
+            { "year": 2023, "revenue": 2500000, "net_income": 400000 }
+        ],
+        "board_members": [{ "name": "Lucia Gomez", "position": "Chairwoman" }],
+        "offices": [{ "city": "Madrid", "country": "Spain" }]
+    },
+    {
+        "name": "RetailPro",
+        "country": "USA",
+        "industry": "Retail",
+        "founded_year": 2001,
+        "details": {
+            "company_type": "Public",
+            "size": "Large",
+            "ceo_name": "David Miller",
+            "headquarters": "Chicago"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 150000000, "net_income": 20000000 },
+            { "year": 2023, "revenue": 160000000, "net_income": 22000000 }
+        ],
+        "board_members": [{ "name": "Susan Clark", "position": "Chairwoman" }],
+        "offices": [
+            { "city": "Chicago", "country": "USA" },
+            { "city": "Dallas", "country": "USA" }
+        ],
+        "stock_info": {
+            "symbol": "RTP",
+            "price": 98.3
+        }
+    },
+    {
+        "name": "CloudNet",
+        "country": "Ireland",
+        "industry": "Technology",
+        "founded_year": 2014,
+        "details": {
+            "company_type": "Private",
+            "size": "Medium",
+            "ceo_name": "Sean O'Brien",
+            "headquarters": "Dublin"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 18000000, "net_income": 3500000 },
+            { "year": 2023, "revenue": 21000000, "net_income": 4000000 }
+        ],
+        "board_members": [{ "name": "Patrick Murphy", "position": "Chairman" }],
+        "offices": [{ "city": "Dublin", "country": "Ireland" }]
+    },
+    {
+        "name": "AgriPlus",
+        "country": "Argentina",
+        "industry": "Agriculture",
+        "founded_year": 2007,
+        "details": {
+            "company_type": "Public",
+            "size": "Medium",
+            "ceo_name": "Sofia Lopez",
+            "headquarters": "Buenos Aires"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 7000000, "net_income": 1000000 },
+            { "year": 2023, "revenue": 8000000, "net_income": 1200000 }
+        ],
+        "board_members": [{ "name": "Juan Perez", "position": "Chairman" }],
+        "offices": [{ "city": "Buenos Aires", "country": "Argentina" }],
+        "stock_info": {
+            "symbol": "AGP",
+            "price": 23.4
+        }
+    },
+    {
+        "name": "SafeGuard",
+        "country": "USA",
+        "industry": "Security",
+        "founded_year": 2010,
+        "details": {
+            "company_type": "Private",
+            "size": "Small",
+            "ceo_name": "Angela White",
+            "headquarters": "Seattle"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 5000000, "net_income": 800000 },
+            { "year": 2023, "revenue": 6000000, "net_income": 900000 }
+        ],
+        "board_members": [{ "name": "Brian Black", "position": "Chairman" }],
+        "offices": [{ "city": "Seattle", "country": "USA" }]
+    },
+    {
+        "name": "LogiTrans",
+        "country": "Netherlands",
+        "industry": "Logistics",
+        "founded_year": 2004,
+        "details": {
+            "company_type": "Public",
+            "size": "Large",
+            "ceo_name": "Jeroen Visser",
+            "headquarters": "Rotterdam"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 120000000, "net_income": 18000000 },
+            { "year": 2023, "revenue": 130000000, "net_income": 20000000 }
+        ],
+        "board_members": [{ "name": "Martijn de Vries", "position": "Chairman" }],
+        "offices": [
+            { "city": "Rotterdam", "country": "Netherlands" },
+            { "city": "Amsterdam", "country": "Netherlands" }
+        ],
+        "stock_info": {
+            "symbol": "LOG",
+            "price": 56.9
+        }
+    },
+    {
+        "name": "BioGenics",
+        "country": "Switzerland",
+        "industry": "Biotech",
+        "founded_year": 2013,
+        "details": {
+            "company_type": "Private",
+            "size": "Small",
+            "ceo_name": "Elena Rossi",
+            "headquarters": "Zurich"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 3500000, "net_income": 700000 },
+            { "year": 2023, "revenue": 4000000, "net_income": 800000 }
+        ],
+        "board_members": [{ "name": "Luca Bernasconi", "position": "Chairman" }],
+        "offices": [{ "city": "Zurich", "country": "Switzerland" }]
+    },
+    {
+        "name": "MediaWorks",
+        "country": "USA",
+        "industry": "Media",
+        "founded_year": 2009,
+        "details": {
+            "company_type": "Public",
+            "size": "Medium",
+            "ceo_name": "Jessica Green",
+            "headquarters": "Los Angeles"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 22000000, "net_income": 4000000 },
+            { "year": 2023, "revenue": 25000000, "net_income": 5000000 }
+        ],
+        "board_members": [{ "name": "Mark Lee", "position": "Chairman" }],
+        "offices": [{ "city": "Los Angeles", "country": "USA" }],
+        "stock_info": {
+            "symbol": "MWK",
+            "price": 12.5
+        }
+    },
+    {
+        "name": "CleanWater",
+        "country": "South Africa",
+        "industry": "Utilities",
+        "founded_year": 2019,
+        "details": {
+            "company_type": "Private",
+            "size": "Small",
+            "ceo_name": "Sipho Dlamini",
+            "headquarters": "Cape Town"
+        },
+        "financials": [
+            { "year": 2022, "revenue": 1500000, "net_income": 300000 },
+            { "year": 2023, "revenue": 1800000, "net_income": 350000 }
+        ],
+        "board_members": [{ "name": "Thandi Nkosi", "position": "Chairwoman" }],
+        "offices": [{ "city": "Cape Town", "country": "South Africa" }]
     }
 ]

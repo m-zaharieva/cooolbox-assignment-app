@@ -1,3 +1,18 @@
+export type BoardMember = {
+    name: string;
+    position: string;
+};
+
+export type Office = {
+    city: string;
+    country: string;
+};
+
+export type StockInfo = {
+    symbol: string;
+    price: number;
+};
+
 export type FinancialData = {
     year: number;
     revenue: number;
@@ -18,4 +33,7 @@ export type Company = {
     founded_year: number;
     details: CompanyDetails;
     financials: FinancialData[];
+    board_members?: BoardMember[];
+    offices?: Office[];
+    stock_info?: StockInfo;
 };
