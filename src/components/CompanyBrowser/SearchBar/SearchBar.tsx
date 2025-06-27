@@ -3,7 +3,7 @@ import './SearchBar.css';
 import data from '../../../data/data.json';
 import type { Company } from '../../../types/dataTypes';
 import { customSort, type SortField } from '../../../utils/sortUtils';
-import { customSearch } from '../../../utils/searchUtils';
+import { useDebouncedValue } from '../../../hooks/useDebouncedValue';
 import { advancedSearch } from '../../../utils/searchUtils';
 
 const industries = Array.from(new Set((data as Company[]).map(c => c.industry)));
@@ -19,6 +19,7 @@ export default function SearchBar({
     const [sortAsc, setSortAsc] = useState(true);
     const [industryFilter, setIndustryFilter] = useState<string>('');
     const [typeFilter, setTypeFilter] = useState<string>('');
+    const debouncedQuery = useDebouncedValue(query, 400); // 400ms debounce
 
     const filtered = useMemo(() => {
         let companies = data as Company[];
@@ -30,7 +31,7 @@ export default function SearchBar({
         // Sort
         companies = customSort(companies, sortField, sortAsc);
         return companies;
-    }, [query, sortField, sortAsc, industryFilter, typeFilter]);
+    }, [debouncedQuery, sortField, sortAsc, industryFilter, typeFilter]);
 
     useEffect(() => {
         updateFiltered(filtered);
