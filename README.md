@@ -9,8 +9,7 @@ A React + TypeScript + Vite application for searching, filtering, and sorting an
 1. **Clone the repository:**
 
     ```bash
-    git clone cooolbox-assignment-app
-    cd cb-app
+    git clone https://github.com/m-zaharieva/cooolbox-assignment-app.git
     ```
 
 2. **Install dependencies:**
