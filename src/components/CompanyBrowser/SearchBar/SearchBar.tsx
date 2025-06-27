@@ -40,35 +40,52 @@ export default function SearchBar({
     return (
         <div className="searchBar">
             <input
+                className="searchBar__input"
                 type="text"
                 placeholder="Search companies..."
                 value={query}
                 onChange={e => setQuery(e.target.value)}
                 style={{ flex: 1, minWidth: 200 }}
             />
-            <select value={industryFilter} onChange={e => setIndustryFilter(e.target.value)}>
-                <option value="">All Industries</option>
-                {industries.map(industry => (
-                    <option key={industry} value={industry}>
-                        {industry}
-                    </option>
-                ))}
-            </select>
-            <select value={typeFilter} onChange={e => setTypeFilter(e.target.value)}>
-                <option value="">All Types</option>
-                {companyTypes.map(type => (
-                    <option key={type} value={type}>
-                        {type}
-                    </option>
-                ))}
-            </select>
-            <select value={sortField} onChange={e => setSortField(e.target.value as SortField)}>
-                <option value="name">Name</option>
-                <option value="founded_year">Founded Year</option>
-                <option value="revenue">Revenue</option>
-                <option value="company_type">Company Type</option>
-            </select>
-            <button onClick={() => setSortAsc(a => !a)}>{sortAsc ? 'Asc' : 'Desc'}</button>
+            <div className="searchBar__dropdowns">
+                <select
+                    className="searchBar__select"
+                    value={industryFilter}
+                    onChange={e => setIndustryFilter(e.target.value)}
+                >
+                    <option value="">All Industries</option>
+                    {industries.map(industry => (
+                        <option key={industry} value={industry}>
+                            {industry}
+                        </option>
+                    ))}
+                </select>
+                <select
+                    className="searchBar__select"
+                    value={typeFilter}
+                    onChange={e => setTypeFilter(e.target.value)}
+                >
+                    <option value="">All Types</option>
+                    {companyTypes.map(type => (
+                        <option key={type} value={type}>
+                            {type}
+                        </option>
+                    ))}
+                </select>
+            </div>
+            <div className="searchBar__dropdowns">
+                <select
+                    className="searchBar__select"
+                    value={sortField}
+                    onChange={e => setSortField(e.target.value as SortField)}
+                >
+                    <option value="name">Name</option>
+                    <option value="founded_year">Founded Year</option>
+                    <option value="revenue">Revenue</option>
+                    <option value="company_type">Company Type</option>
+                </select>
+                <button onClick={() => setSortAsc(a => !a)}>{sortAsc ? 'Asc' : 'Desc'}</button>
+            </div>
         </div>
     );
 }
