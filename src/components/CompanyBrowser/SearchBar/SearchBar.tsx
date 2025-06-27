@@ -1,18 +1,39 @@
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import './SearchBar.css';
 import data from '../../../data/data.json';
 import type { Company } from '../../../types/dataTypes';
-import { type SortField } from '../../../utils/sortUtils';
+import { customSort, type SortField } from '../../../utils/sortUtils';
+import { customSearch } from '../../../utils/searchUtils';
 
 const industries = Array.from(new Set((data as Company[]).map(c => c.industry)));
 const companyTypes = Array.from(new Set((data as Company[]).map(c => c.details.company_type)));
 
-export default function SearchBar() {
+export default function SearchBar({
+    updateFiltered,
+}: {
+    updateFiltered: (filteredData: Company[]) => void;
+}) {
     const [query, setQuery] = useState('');
     const [sortField, setSortField] = useState<SortField>('name');
     const [sortAsc, setSortAsc] = useState(true);
     const [industryFilter, setIndustryFilter] = useState<string>('');
     const [typeFilter, setTypeFilter] = useState<string>('');
+
+    const filtered = useMemo(() => {
+        let companies = data as Company[];
+        // Filtering
+        if (industryFilter) companies = companies.filter(c => c.industry === industryFilter);
+        if (typeFilter) companies = companies.filter(c => c.details.company_type === typeFilter);
+        // Search
+        companies = customSearch(companies, query);
+        // Sort
+        companies = customSort(companies, sortField, sortAsc);
+        return companies;
+    }, [query, sortField, sortAsc, industryFilter, typeFilter]);
+
+    useEffect(() => {
+        updateFiltered(filtered);
+    }, [filtered, updateFiltered]);
 
     return (
         <div className="searchBar">
