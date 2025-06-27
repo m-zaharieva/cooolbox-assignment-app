@@ -1,0 +1,23 @@
+.companyItem {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* margin-bottom: 12px; */
+    padding: 12px;
+    background: #ffffff;
+}
+
+.companyItem h2 {
+    font-size: 1.2em;
+    margin: 0 0 8px;
+}
+
+.companyItem .tyle {
+    display: flex;
+    flex-direction: column;
+}
+
+.companyItem .tyle label {
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-size: 12px;
+}
