@@ -4,6 +4,7 @@ import data from '../../../data/data.json';
 import type { Company } from '../../../types/dataTypes';
 import { customSort, type SortField } from '../../../utils/sortUtils';
 import { customSearch } from '../../../utils/searchUtils';
+import { advancedSearch } from '../../../utils/searchUtils';
 
 const industries = Array.from(new Set((data as Company[]).map(c => c.industry)));
 const companyTypes = Array.from(new Set((data as Company[]).map(c => c.details.company_type)));
@@ -25,7 +26,7 @@ export default function SearchBar({
         if (industryFilter) companies = companies.filter(c => c.industry === industryFilter);
         if (typeFilter) companies = companies.filter(c => c.details.company_type === typeFilter);
         // Search
-        companies = customSearch(companies, query);
+        companies = advancedSearch(companies, debouncedQuery);
         // Sort
         companies = customSort(companies, sortField, sortAsc);
         return companies;
