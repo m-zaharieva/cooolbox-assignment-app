@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.7em;
+    font-size: 27px;
     font-weight: bold;
     color: #4a5cff;
 }
@@ -35,11 +35,11 @@
     gap: 2px;
 }
 .companyCard__industry {
-    font-size: 0.95em;
+    font-size: 15px;
     color: #888;
 }
 .companyCard__country {
-    font-size: 0.85em;
+    font-size: 14px;
     color: #bbb;
 }
 .companyCard__body {
@@ -47,18 +47,18 @@
 }
 .companyCard__name {
     margin: 0 0 2px 0;
-    font-size: 1.3em;
+    font-size: 20px;
     font-weight: 600;
 }
 .companyCard__subtitle {
     color: #4a5cff;
-    font-size: 1em;
+    font-size: 20px;
     margin-bottom: 8px;
 }
 .companyCard__infoRow {
     display: flex;
     justify-content: space-between;
-    font-size: 0.97em;
+    font-size: 16px;
     color: #444;
     margin-bottom: 2px;
 }
@@ -66,7 +66,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.93em;
+    font-size: 15px;
     color: #666;
     margin-top: 10px;
     gap: 8px;
